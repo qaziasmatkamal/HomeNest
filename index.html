@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+#parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+#main{
+    height: 500px;width: 100%;
+    background-image:linear-gradient(rgba(38, 23, 15, 0.6)), url(https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop) ;
+    object-fit: cover;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: large;
+  background-position: center;
+  }
+  #main-content h1{
+    font-size: 65px;
+    text-align: center;
+  }
+
+  #center{
+    display: flex;
+            flex-direction: row;
+            justify-content:space-evenly ;
+            align-items: center;
+          padding: 5px;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+
+  }
+  .center-div{
+    height: 400px;width: 350px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 10%;
+    
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+}
+
+.center-div:hover {
+  transform: translateY(-5px);
+}
+  
+  .center-div img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-position: center;
+  }
+  .div-button{
+    width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  border: none;
+  background-color: #26170F;
+  color:  rgb(245, 233, 210);
+  cursor: pointer;
+  border-radius: 4px;
+  }
+@media screen and (max-width: 600px) {
+
+  #main {
+    height: auto !important;
+    min-height: 350px;
+    padding: 40px 15px !important;
+    text-align: center;
+  }
+
+  #main-content h1 {
+    font-size: 30px !important;
+    line-height: 1.2;
+  }
+
+  #main-content p {
+    font-size: 14px !important;
+    padding: 0 10px;
+  }
+
+  h2[style*="margin-top"] {
+    font-size: 22px !important;
+    text-align: center;
+    margin-top: 20px !important;
+  }
+
+  #center {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 10px 0 !important;
+    gap: 20px;
+  }
+
+  .center-div {
+    width: 90% !important;
+    max-width: 340px;
+    height: auto !important;
+    margin: 0 auto 15px auto !important;
+    padding-bottom: 15px;
+  }
+
+  .center-div img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover;
+  }
+
+  .div-button {
+    width: 85% !important;
+    margin: 15px auto 5px auto !important;
+    display: block;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <header class="top-header">
+  <div class="logo-container">
+    <img src="ChatGPT Image Sep 5, 2026, 04_43_31 PM.png" alt="HomeNest Logo" class="site-logo">
+  </div>
+
+
+  <div class="header-title">
+    <h1>Home<span>Nest</span></h1>
+    <p>Where Comforts Finds Its Place</p>
+  </div>
+
+
+  
+    <div class="social-icons">
+  <a href="#" class="icon-circle"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-twitter"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+  </div>
+</header>
+    <div id="nav-bar">
+        <a href="home.html">Home</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="new-arrival.html">New Arrivals</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About</a>
+    </div>
+    
+   
+    <div id="main">
+        <div id="main-content">
+        <h1>Crafting Timeless Elegance</h1>
+        <p>Discover hand-carved wooden furniture designed to bring comfort and sophistication to your home.</p>
+        </div>
+    </div>
+
+   <h2 style="margin-top: 30px; margin-bottom: 10px;">Featured Collection</h2>
+
+    <div id="center"> 
+        <div class="center-div"><img src="https://www.chavle.mk/cdn/shop/files/tv-komoda-siena_4.webp?v=1781526851&width=2048">
+        <h3 style="margin-top: 15px; color: #26170F;">Siena TV Console</h3>
+        <p style="margin-top: 10px;font-weight: bold; color: rgb(180, 153, 0);">PKR 78,000</p>
+        <button class="div-button">Buy Now</button>
+        </div>
+        <div class="center-div"><img style="object-position: center 65%;" src="https://vox-files.com/assets/file/product/arrangement/250724_vox_velora_1756.jpg">
+        <h3 style="margin-top: 15px; color: #26170F;">Velora Sofa</h3>
+        <p style="margin-top: 10px;font-weight: bold; color: rgb(180, 153, 0);">PKR 185,000</p>
+        <button class="div-button">Buy Now</button>
+    </div>
+        <div class="center-div"><img style="object-position: center 85%;" src="https://images.thdstatic.com/productImages/9467536f-a11f-49f8-a376-e0f6ce74fbe0/svn/mocha-best-master-furniture-dining-chairs-kf002mc-64_600.jpg">
+        <h3 style="margin-top: 15px; color: #26170F;">Alora Accent Chair</h3>
+        <p style="margin-top: 10px;font-weight: bold; color: rgb(180, 153, 0);">PKR 68,000</p>
+        <button class="div-button">Buy Now</button>
+        </div>
+    </div>
+    <br/>
+     <div id="center"> 
+        <div class="center-div"><img src="https://sunpan.com/cdn/shop/files/105882_5_852a4e41-2570-40a0-b7b8-e378fa63ea77.jpg?v=1688488422&width=533">
+        <h3 style="margin-top: 15px; color: #26170F;">Monaco Dining Table</h3>
+        <p style="margin-top: 10px;font-weight: bold; color: rgb(180, 153, 0);">PKR 145,000</p>
+        <button class="div-button">Buy Now</button>
+        </div>
+        <div class="center-div"><img src="https://poshish.pk/cdn/shop/files/DSC00215_1800x1800.webp?v=1722017509">
+        <h3 style="margin-top: 15px; color: #26170F;">Evelyn Bed</h3>
+        <p style="margin-top: 10px;font-weight: bold; color: rgb(180, 153, 0);">PKR 265,000</p>
+        <button class="div-button">Buy Now</button>
+    </div>
+        <div class="center-div"><img src="https://furnituretrader.com.au/media/catalog/product/cache/dc8fdb4bc2c3381a3b1b9e30e1e56d13/r/i/riviera_coffee_table_-_square.jpg">
+        <h3 style="margin-top: 15px; color: #26170F;">Riviera Coffee Table</h3>
+        <p style="margin-top: 10px;font-weight: bold; color: rgb(180, 153, 0);">PKR 52,000</p>
+        <button class="div-button">Buy Now</button>
+        </div>
+    </div>
+    <br/>
+     <div id="center"> 
+        <div class="center-div"><img style="object-position: center 105%;" src="https://content.scottsofstow.co.uk/img/o/543096_3442964_1colour_w_5.jpg">
+        <h3 style="margin-top: 15px; color: #26170F;">Arden Bookshelf</h3>
+        <p style="margin-top: 10px;font-weight: bold; color: rgb(180, 153, 0);">PKR 62,000</p>
+        <button class="div-button">Buy Now</button>
+        </div>
+        <div class="center-div"><img src="https://shop.homejourney.sg/cdn/shop/files/homejourney-dy-p093-02-home-staged-f37caaad5ba6.jpg?v=1784287367&width=3840">
+        <h3 style="margin-top: 15px; color: #26170F;">Liora Sideboard</h3>
+        <p style="margin-top: 10px;font-weight: bold; color: rgb(180, 153, 0);">PKR 95,000</p>
+        <button class="div-button">Buy Now</button>
+    </div>
+        <div class="center-div"><img style="object-position: center 80%;" src="https://top3.com.au/cdn/shop/files/freifrau_leya_lounge_lifestyle_02_1500.jpg?v=1690188542&width=1080">
+        <h3 style="margin-top: 15px; color: #26170F;">Cairo Lounge Chair</h3>
+        <p style="margin-top: 10px;font-weight: bold; color: rgb(180, 153, 0);">PKR 72,000</p>
+        <button class="div-button">Buy Now</button>
+        </div>
+    </div>
+
+<footer>
+
+    <div id="parent">
+        <div class="child">
+            <h2>Home<span>Nest</span></h2>
+            <br/>
+            <p>Crafting high-quality, sustainable wooden furniture to elevate modern living spaces with timeless elegance.</p>
+        </div>
+        <div class="child">
+            <h4>Quick <span>Links</span></h4>
+           <br/>
+            <a class="link" href="home.html">Home</a>
+            <br/>
+            <a class="link" href="Gallery.html">Gallery</a>
+            <br/>
+            <a class="link" href="new-arrival.html">New Arrivals</a>
+            <br/>
+            <a class="link" href="contact.html">Contact Us</a>
+            <br/>
+            <a class="link" href="about.html">About Us</a>
+            
+        </div>
+        <div class="child">
+            <h4><span>Categories</span></h4>
+           <br/>
+            <a class="link" href="#">Living Room</a>
+            <br/>
+            <a class="link" href="#">Bedroom</a>
+            <br/>
+            <a class="link" href="#">Dining Room</a>
+            <br/>
+            <a class="link" href="#">Office Furniture</a>
+            <br/>
+            <a class="link" href="#">Kitchen</a>
+        </div>
+        <div class="child">
+            <h4><span>Stay</span> Updated</h4>
+            <br/>
+            <p>Subscribe for exclusive designs and discount offers.</p>
+            <br/>
+            <div style="display: flex; align-items: center;">
+            <input id="email" type="email" placeholder="Enter your email" required>
+            <input id="join" type="submit" value=" Join ">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <br/>
+    <p>&copy; 2026 HomeNest Furniture. All Rights Reserved.</p>
+    <br/>
+</footer>
+</body>
+</html>
