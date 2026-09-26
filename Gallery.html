@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+ #column1{
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 25px;
+}
+#column2{
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 25px;
+}
+#column3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 25px;
+}
+
+.row1{
+        height: 200px;
+    flex: 1 1 230px;
+    max-width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    background:white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition:
+        height 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.row1:hover{
+transform: scale(1.05); 
+  z-index: 10; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.row1 img {
+width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+.row1 img[style] {
+    object-fit: cover;
+}
+.row2{
+    height: 200px;
+    flex: 1 1 230px;
+    max-width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    background:white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition:
+        height 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.row2:hover{
+ transform: scale(1.05); 
+  z-index: 10; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.row2 img{
+width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+.row2 img[style] {
+    object-fit: cover;
+}
+.row3 {
+    height: 220px;
+    flex: 2 1 450px;
+    max-width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition:
+        height 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.row3:hover {
+transform: scale(1.05);
+  z-index: 10; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.row3 img {
+width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+.row3 img[style] {
+    object-fit: cover;
+}
+.product-info {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: white;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.row1:hover .product-info{
+   opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.row2:hover .product-info{
+opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.row3:hover .product-info {
+opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.product-info h3 {
+    margin: 0% auto;
+    font-size: 17px;
+    font-weight: bold;
+    color: #26170F;
+}
+.product-info button {
+    width: 90%;
+    padding: 10px;
+    margin: 0% auto;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background:#26170F;
+    color: rgb(245, 233, 210);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.product-info button:hover {
+    background: #4a2c20;
+}
+.row1, .row2, .row3 {
+  position: relative;
+  overflow: visible; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media screen and (max-width: 600px) {
+
+  #column1, #column2, #column3 {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 10px 0 !important;
+    gap: 20px !important;
+  }
+
+  .row1, .row2, .row3 {
+    width: 90% !important;
+    max-width: 340px !important;
+    flex: none !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  .row1 img, .row2 img, .row3 img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+  }
+
+  .product-info {
+    position: relative !important;
+    top: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    box-shadow: none !important;
+    border-radius: 0 0 10px 10px !important;
+  }
+
+  .row1:hover, .row2:hover, .row3:hover {
+    transform: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+       <header class="top-header">
+  
+  <div class="logo-container">
+    <img src="ChatGPT Image Sep 5, 2026, 04_43_31 PM.png" alt="HomeNest Logo" class="site-logo">
+  </div>
+
+
+  <div class="header-title">
+    <h1>Home<span>Nest</span></h1>
+    <p>Where Comforts Finds Its Place</p>
+  </div>
+
+  
+  
+    <div class="social-icons">
+  <a href="#" class="icon-circle"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-twitter"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+</header>
+    <div id="nav-bar">
+        <a href="home.html">Home</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="new-arrival.html">New Arrivals</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About</a>
+    </div>
+    
+   <div id="column1">
+    <div class="row1"> <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500">
+       <div class="product-info">
+        <h3>Modern Sofa</h3>
+        <button>Add to Cart</button>
+    </div>
+  </div>
+   <div class="row1"><img style="object-position: center 60%;" src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?w=500">
+     <div class="product-info">
+        <h3>Modern Dining Table</h3>
+        <button>Add to Cart</button>
+    </div>
+  </div>
+    <div class="row1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXznLO5uTvKofFJ8uTOPJ3ounCVZWXxmYOyzLeq-qoUA&s=10">
+     <div class="product-info">
+        <h3>Modern Lounge Chair</h3>
+        <button>Add to Cart</button>
+    </div>
+    </div>
+     <div class="row1"><img style="object-position: center 50%;" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500">
+     <div class="product-info">
+        <h3>Luxury Bedroom Set</h3>
+        <button>Add to Cart</button>
+    </div>
+    </div>
+     </div>
+
+      <div id="column2">
+    <div class="row2"><img style="object-position: center 65%;" class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAzGrOYQ-V2jJpHlia0F0wdtVrcx7nKHPFOC7CyPyCbFlC9Z2EaJAqSr3I&s=10">
+     <div class="product-info">
+        <h3>Elegant Sofa Set</h3>
+        <button>Add to Cart</button>
+    </div>
+    </div>
+   <div class="row2"><img style="object-position: center 65%;" class="img" src="https://www.sofaandsofabed.com/cdn/shop/files/Space_W12_horizontal_sofa_day.jpg?v=1771752926&width=1080">
+   <div class="product-info">
+        <h3>Modern Wall Bed</h3>
+        <button>Add to Cart</button>
+    </div>
+  </div>
+    <div class="row2"><img style="object-position: center 65%;" class="img" src="https://resourcefurniture.com/cdn/shop/products/circe-sofa-horizontal-queen-wall-bed-with-sofa-space-saving-furniture-murphy-bed-with-couch.jpg?v=1744387256&width=1024">
+     <div class="product-info">
+        <h3>Minimalist Bed</h3>
+        <button>Add to Cart</button>
+    </div>
+    </div>
+     <div class="row2"><img src="https://www.lamaisonconvertible.fr/cdn/shop/files/Image_2.jpg?v=1679055863&width=1500">
+     <div class="product-info">
+        <h3>Modern Bedroom</h3>
+        <button>Add to Cart</button>
+    </div>
+    </div>
+     </div>
+
+ <div id="column3">
+    <div class="row3"><img style="object-position: center 85%;" class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-eaTyje4orP-JGSlPFa6hYkVokDVaE6j0FJWi8YP1UIZg9Kapg1P4Ivp-&s=10">
+     <div class="product-info">
+        <h3>Luxury Living Room Set</h3>
+        <button>Add to Cart</button>
+    </div>
+    </div>
+
+   <div class="row3"><img style="object-position: center 55%;" class="img" src="https://images.unsplash.com/photo-1722764385071-a759f725d06a?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8">
+   <div class="product-info">
+        <h3>Modern Living Room</h3>
+        <button>Add to Cart</button>
+    </div>
+  </div>
+   
+ </div>
+
+
+<footer>
+
+    <div id="parent">
+        <div class="child">
+            <h2>Home<span>Nest</span></h2>
+            <br/>
+            <p>Crafting high-quality, sustainable wooden furniture to elevate modern living spaces with timeless elegance.</p>
+        </div>
+        <div class="child">
+            <h4>Quick <span>Links</span></h4>
+           <br/>
+            <a class="link" href="home.html">Home</a>
+            <br/>
+            <a class="link" href="Gallery.html">Gallery</a>
+            <br/>
+            <a class="link" href="new-arrival.html">New Arrivals</a>
+            <br/>
+            <a class="link" href="contact.html">Contact Us</a>
+            <br/>
+            <a class="link" href="about.html">About Us</a>
+            
+        </div>
+        <div class="child">
+            <h4><span>Categories</span></h4>
+           <br/>
+            <a class="link" href="#">Living Room</a>
+            <br/>
+            <a class="link" href="#">Bedroom</a>
+            <br/>
+            <a class="link" href="#">Dining Room</a>
+            <br/>
+            <a class="link" href="#">Office Furniture</a>
+            <br/>
+            <a class="link" href="#">Kitchen</a>
+        </div>
+        <div class="child">
+            <h4><span>Stay</span> Updated</h4>
+            <br/>
+            <p>Subscribe for exclusive designs and discount offers.</p>
+            <br/>
+            <div style="display: flex; align-items: center;">
+            <input id="email" type="email" placeholder="Enter your email" required> <input id="join" type="submit" value=" Join ">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <br/>
+    <p>&copy; 2026 HomeNest Furniture. All Rights Reserved.</p>
+    <br/>
+</footer>
+
+
+</body>
+</html>

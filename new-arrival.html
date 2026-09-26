@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #26170F;
+    background: #f3e9e1;
+}
+
+
+
+
+.arrival-header {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background-image:
+        linear-gradient(
+            rgba(243, 233, 225, 0.35),
+            rgba(243, 233, 225, 0.35)
+        ),
+        url("https://images.unsplash.com/photo-1584995124038-f6fe4fe869f0?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNyZWFtJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.arrival-header-content {
+    max-width: 650px;
+}
+
+.arrival-header span {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.arrival-header h1 {
+    font-size: 48px;
+    margin: 12px 0 18px;
+    font-weight: 600;
+}
+
+.arrival-header p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+
+.arrival-filter {
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 35px;
+
+    padding: 22px;
+
+    border-bottom: 1px solid #e4d6cc;
+}
+
+.arrival-filter button {
+    background: none;
+    border: none;
+
+    color: #26170F;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    padding-bottom: 5px;
+}
+
+.arrival-filter button.active {
+    border-bottom: 1px solid #26170F;
+}
+
+
+
+.new-products {
+    padding: 70px 6%;
+}
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 45px 22px;
+}
+
+
+
+
+.product-card {
+    background: transparent;
+}
+
+.product-image {
+    height: 390px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #e9ddd4;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+
+
+
+.new-badge {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    z-index: 2;
+
+    background: #26170F;
+    color: white;
+
+    padding: 7px 11px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+
+
+.product-info {
+    padding-top: 17px;
+
+    text-align: left;
+}
+
+.product-info h2 {
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+.product-info p {
+    font-size: 10px;
+
+    margin-bottom: 10px;
+
+    opacity: 0.75;
+}
+
+.product-info strong {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 14px;
+}
+
+
+.view-btn {
+    background: transparent;
+
+    border: 1px solid #26170F;
+
+    color: #26170F;
+
+    padding: 9px 15px;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #26170F;
+    color: white;
+}
+
+header{
+        border-bottom: 0.5px solid rgb(245, 233, 210);
+    }
+    @media screen and (max-width: 600px) {
+
+  .arrival-header {
+    min-height: auto !important;
+    padding: 40px 15px !important;
+  }
+
+  .arrival-header h1 {
+    font-size: 32px !important;
+    margin: 10px 0 !important;
+  }
+
+  .arrival-header p {
+    font-size: 13px !important;
+  }
+
+  .arrival-filter {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 12px 18px !important;
+    padding: 15px 10px !important;
+  }
+
+  .new-products {
+    padding: 30px 15px !important;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .product-image {
+    height: 260px !important;
+  }
+
+  .product-card {
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+  }
+}
+    </style>
+</head>
+<body>
+      <header class="top-header">
+
+  <div class="logo-container">
+    <img src="ChatGPT Image Sep 5, 2026, 04_43_31 PM.png" alt="HomeNest Logo" class="site-logo">
+  </div>
+
+  
+  <div class="header-title">
+    <h1>Home<span>Nest</span></h1>
+    <p>Where Comforts Finds Its Place</p>
+  </div>
+
+    <div class="social-icons">
+  <a href="#" class="icon-circle"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-twitter"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+</header>
+    <div style="background-color: #26170F;" id="nav-bar">
+        <a style="color:  rgb(245, 233, 210);" href="home.html">Home</a>
+        <a style="color:  rgb(245, 233, 210);"href="Gallery.html">Gallery</a>
+        <a style="color:  rgb(245, 233, 210);"href="new-arrival.html">New Arrivals</a>
+        <a style="color:  rgb(245, 233, 210);"href="contact.html">Contact Us</a>
+        <a style="color:  rgb(245, 233, 210);"href="about.html">About</a>
+    </div>
+    
+
+
+</body>
+    <section class="arrival-header">
+
+        <div class="arrival-header-content">
+
+            <h5>HomeNest</h5>
+
+            <h1>New Arrivals</h1>
+
+            <p>
+                Discover our latest collection of furniture and décor,
+                thoughtfully designed to bring beauty and comfort into your home.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    
+    <section class="arrival-filter">
+
+        <button class="active">ALL</button>
+        <button>SOFAS</button>
+        <button>CHAIRS</button>
+        <button>TABLES</button>
+        <button>BEDS</button>
+        <button>DECOR</button>
+
+    </section>
+
+
+    
+    <section class="new-products">
+
+        <div class="product-grid">
+
+
+            
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="new-badge">NEW</span>
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkv-03Ngpx2mV61RYXP6bDOjdHtEuHJEcUJEqCPmXW-QaeY4IoyGyqUsY&s=10" alt="Luna Sofa">
+                </div>
+
+                <div class="product-info">
+
+                    <h2>Luna Sofa</h2>
+
+                    <p>Modern curved sofa</p>
+
+                    <strong>PKR 185,000</strong>
+
+                    <button class="view-btn">VIEW PRODUCT</button>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="new-badge">NEW</span>
+
+                    <img src="https://www.monologuelondon.com/cdn/shop/products/Monologue-London-De-La-Espada-Mira-Lounge-Chair-And-Ottoman-Pole-Light-And-I-Beam-By-Matthew-Hilton-Photo-By-Yuki-Sugiura.jpg?v=1751016810&width=2362" alt="Mira Lounge Chair">
+                </div>
+
+                <div class="product-info">
+
+                    <h2>Mira Lounge Chair</h2>
+
+                    <p>Soft boucle accent chair</p>
+
+                    <strong>PKR 72,000</strong>
+
+                    <button class="view-btn">VIEW PRODUCT</button>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="new-badge">NEW</span>
+
+                    <img src="https://www.chavle.com/cdn/shop/files/AriaBLACK-low_2.jpg?v=1733122564&width=2048" alt="Aria Dining Table">
+                </div>
+
+                <div class="product-info">
+
+                    <h2>Aria Dining Table</h2>
+
+                    <p>Elegant marble dining table</p>
+
+                    <strong>PKR 165,000</strong>
+
+                    <button class="view-btn">VIEW PRODUCT</button>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="new-badge">NEW</span>
+
+                    <img src="https://lineandgrain.ca/cdn/shop/files/nora-storage-bed-lifestyle.png?v=1772744192&width=1024" alt="Nora Bed">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h2>Nora King Bed</h2>
+
+                    <p>Luxury upholstered bed</p>
+
+                    <strong>PKR 145,000</strong>
+
+                    <button class="view-btn">VIEW PRODUCT</button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="new-badge">NEW</span>
+
+                    <img src="https://www.furniturewalla.com/cdn/shop/files/313012552_313012551_Ai2.png?v=1779777374&width=1946" alt="Elara Side Table">
+                </div>
+
+                <div class="product-info">
+
+                    <h2>Elara Side Table</h2>
+
+                    <p>Minimal wooden side table</p>
+
+                    <strong>PKR 38,000</strong>
+
+                    <button class="view-btn">VIEW PRODUCT</button>
+
+                </div>
+
+            </div>
+
+        
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="new-badge">NEW</span>
+
+                    <img src="https://www.originals.com.sg/cdn/shop/files/NS_sienna_fabric_armchair_amber_75cm_WEB_1.jpg?v=1729217154" alt="Sienna Armchair">
+                </div>
+
+                <div class="product-info">
+
+                    <h2>Sienna Armchair</h2>
+
+                    <p>Contemporary comfort chair</p>
+
+                    <strong>PKR 68,000</strong>
+
+                    <button class="view-btn">VIEW PRODUCT</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="new-badge">NEW</span>
+
+                    <img src="https://www.moranfurniture.com.au/wp-content/uploads/2025/04/AVERY_COFFEE-TABLE_SET_LIFESTYLE_1A.jpg" alt="Avery Coffee Table">
+                </div>
+
+                <div class="product-info">
+
+                    <h2>Avery Coffee Table</h2>
+
+                    <p>Modern statement coffee table</p>
+
+                    <strong>PKR 58,000</strong>
+
+                    <button class="view-btn">VIEW PRODUCT</button>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="new-badge">NEW</span>
+
+                    <img src="https://www.modernrelik.com/cdn/shop/files/Mila_H_Console_ls2_copy.jpg?v=1759378797" alt="Mila Console">
+                </div>
+
+                <div class="product-info">
+
+                    <h2>Mila Console</h2>
+
+                    <p>Elegant entryway console</p>
+
+                    <strong>PKR 82,000</strong>
+
+                    <button class="view-btn">VIEW PRODUCT</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+
+
+ 
+<footer>
+
+    <div id="parent">
+        <div class="child">
+            <h2>Home<span>Nest</span></h2>
+            <br/>
+            <p>Crafting high-quality, sustainable wooden furniture to elevate modern living spaces with timeless elegance</p>
+        </div>
+        <div class="child">
+            <h4>Quick <span>Links</span></h4>
+           <br/>
+            <a class="link" href="home.html">Home</a>
+            <br/>
+            <a class="link" href="Gallery.html">Gallery</a>
+            <br/>
+            <a class="link" href="new-arrival.html">New Arrivals</a>
+            <br/>
+            <a class="link" href="contact.html">Contact Us</a>
+            <br/>
+            <a class="link" href="about.html">About Us</a>
+            
+        </div>
+        <div class="child">
+            <h4><span>Categories</span></h4>
+           <br/>
+            <a class="link" href="#">Living Room</a>
+            <br/>
+            <a class="link" href="#">Bedroom</a>
+            <br/>
+            <a class="link" href="#">Dining Room</a>
+            <br/>
+            <a class="link" href="#">Office Furniture</a>
+            <br/>
+            <a class="link" href="#">Kitchen</a>
+        </div>
+        <div class="child">
+            <h4><span>Stay</span> Updated</h4>
+            <br/>
+            <p>Subscribe for exclusive designs and discount offers.</p>
+            <br/>
+            <div style="display: flex; align-items: center;">
+            <input id="email" type="email" placeholder="Enter your email" required> <input id="join" type="submit" value=" Join ">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <br/>
+    <p>&copy; 2026 HomeNest Furniture. All Rights Reserved.</p>
+    <br/>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+   #contact-main{
+    width: 100%;height: 350px;
+    background-image: url(https://images.unsplash.com/photo-1635674663782-9a9dd051fc99?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YnJvd24lMjBsZWFmfGVufDB8fDB8fHww);
+       object-fit: cover;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: large;
+  background-position: center;
+   }
+   
+   #contact-parent{
+         display: flex;
+            flex-direction: row;
+            justify-content:center ;
+            align-items: center;
+          padding: 5px;
+        flex-wrap: wrap;
+        height: 300px;
+    }
+    .contact-child{
+        height: 200px;width: 300px;
+        padding-top: 8px;
+    
+        margin: 10px;
+        border: 1px solid #26170f;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .contact-child:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    }
+  
+#form-parent {
+  display: flex;
+  width: 85%;
+  margin: 20px auto;
+  border: 2px solid #26170f;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+.form-left {
+  flex: 1;
+  padding: 30px;
+  text-align: center;
+  border-right: 2px solid #26170f;
+}
+
+.form-left label {
+  font-weight: bold;
+  color: #26170f;
+}
+
+.form-left .box {
+  width: 80%;
+  padding: 8px 12px;
+  margin-top: 5px;
+  border: 1px solid #26170f;
+  border-radius: 15px;
+  outline: none;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form-left .btn {
+  padding: 8px 20px;
+  background-color: #26170f;
+  color: #D4A373;
+  border: 1px solid #D4A373;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.info-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+}
+
+.shop-details {
+  background-color: #26170f;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+.shop-details h3 {
+  color: #D4A373;
+  font-size: 16px;
+  margin: 8px 0 4px 0;
+}
+
+.shop-details p {
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.4;
+}
+.shop-map {
+  flex: 1;
+  min-height: 250px;
+  border: 1px solid #26170f;
+  border-radius: 6px;
+  overflow: hidden;
+}
+    .btn{
+         padding: 10px 15px;
+    background-color: #26170F;
+    border-radius: 4px;
+    border: 4px solid rgb(248, 225, 94);
+    color: rgb(245, 233, 210);
+    }
+    .box{
+           padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #26170F;
+    color: #26170F
+    }
+    @media screen and (max-width: 600px) {
+
+  #contact-main {
+    height: auto !important;
+    padding: 40px 15px !important;
+    text-align: center;
+  }
+
+  #contact-parent {
+    flex-direction: column !important;
+    align-items: center !important;
+    height: auto !important;
+    padding: 10px 0 !important;
+    gap: 15px;
+  }
+
+  .contact-child {
+    width: 90% !important;
+    max-width: 340px;
+    height: auto !important;
+    padding: 20px 10px !important;
+    margin: 0 auto !important;
+  }
+
+  #form-parent {
+    flex-direction: column !important;
+    width: 95% !important;
+    margin: 20px auto !important;
+  }
+
+  .form-left {
+    border-right: none !important;
+    border-bottom: 2px solid #26170F;
+    padding: 20px 15px !important;
+  }
+
+  .form-left .box {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .btn-group {
+    flex-direction: column !important;
+    gap: 10px;
+  }
+
+  .form-left .btn {
+    width: 100% !important;
+  }
+
+  .info-right {
+    padding: 20px 15px !important;
+  }
+
+  .shop-map {
+    min-height: 200px !important;
+  }
+}
+    </style>
+</head>
+<body>
+       <header class="top-header">
+  
+  <div class="logo-container">
+    <img src="ChatGPT Image Sep 5, 2026, 04_43_31 PM.png" alt="HomeNest Logo" class="site-logo">
+  </div>
+
+
+  <div class="header-title">
+    <h1>Home<span>Nest</span></h1>
+    <p>Where Comforts Finds Its Place</p>
+  </div>
+
+ 
+    <div class="social-icons">
+  <a href="#" class="icon-circle"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-twitter"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+  </div>
+</header>
+    <div id="nav-bar">
+        <a href="home.html">Home</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="new-arrival.html">New Arrivals</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About</a>
+    </div>
+     <div id="contact-main">
+        <div id="main-content">
+         <h1>Get In Touch-We're Here to Help You!</h1>
+         <p style="margin-top: 5px;">Reach out to us via phone,email or whatsapp,or visit our store for personalize support.<br/> We look forward to connecting with You</p>
+        </div>
+     </div>
+
+
+
+
+     <div id="contact-parent">
+
+  <div class="contact-child">
+      <i style="font-size: x-large;color: #26170f;" class="fa-solid fa-phone"></i>
+      <br/> &nbsp;
+    <h2 style="color: #26170f;">Reach Out <br/>Let’s Talk!</h2>
+    <br/>
+    <a style="color: #26170f;" href="tel:03203092561,03452996597">03203092561<br/>03452996597</a>
+  </div>
+
+
+  <div style="height: 225px;" class="contact-child">
+      <i style="font-size: xxx-large;color: #26170f ;" class="fa-brands fa-whatsapp"></i>
+      <br/> &nbsp;
+    <h2 style="color: #26170f;">Reach Us On <br/>WhatsApp!</h2>
+    &nbsp; <br/>
+    <a style="color: #26170f;" href="https://wa.me/923203092561">+923203092561</a>
+    <br/>
+    <a style="color: #26170f;" href="https://wa.me/923452996597">+923452996597</a>    
+  </div>
+
+  <div class="contact-child">
+          <i style="font-size: x-large;color: #26170f;" class="fa-solid fa-envelope"></i>
+      <br/> &nbsp;
+    <h2 style="color: #26170f;">We're Just an <br/>Email Away!</h2>
+    <br/> &nbsp;
+    <a style="color: #26170f;" href="mailto:qaziasmat8@gmail.com">qaziasmat8@gmail.com</a>
+    <br/>
+    <a style="color: #26170f;" href="mailto:triggu.028@gmail.com">triggu.028@gmail.com</a>
+
+  </div>
+    </div>
+
+   <div id="form-parent">
+  
+  <div class="form-left">
+    <h2 style="color: #26170f; margin-top: 10px;">
+      <span style="color: #5f3a26;">(•'ᴗ'•)</span><br>Drop Us A Message
+    </h2>
+    
+    <form>
+      <label>Name</label><br>
+      <input class="box" type="text" placeholder="Enter your full name" required><br><br>
+
+      <label>Email</label><br>
+      <input class="box" type="email" placeholder="Enter your email" required><br><br>
+
+      <label>Phone Number</label><br>
+      <input class="box" type="tel" id="phone" name="phone" placeholder="03XX-XXXXXXX"><br><br>
+
+      <label>Tell US</label><br>
+      <textarea class="box" rows="4" placeholder="Write Comment OR Message"></textarea><br><br>
+
+      <div class="btn-group">
+        <input class="btn" type="submit" value="Register">
+        <input class="btn" type="reset" value="Clear Form">
+    </div>
+    </form>
+  </div>
+
+  
+  <div class="info-right">
+    
+    <div class="shop-details">
+      <h3><i class="fa-solid fa-location-dot"></i> Shop Address</h3>
+      <p>344 Main Furniture Market, Karachi, Pakistan</p>
+      <h3><i class="fa-solid fa-clock"></i> Opening & Closing Hours</h3>
+      <p>Monday - Saturday: 10:00 AM - 9:00 PM<br>Sunday: Closed</p>
+    </div>
+
+    
+    <div class="shop-map">
+      <iframe 
+        src="https://www.google.com/maps/?q=24.9474507,67.1080939&output=embed" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+
+<footer>
+
+    <div id="parent">
+        <div class="child">
+            <h2>Home<span>Nest</span></h2>
+            <br/>
+            <p>Crafting high-quality, sustainable wooden furniture to elevate modern living spaces with timeless elegance.</p>
+        </div>
+        <div class="child">
+            <h4>Quick <span>Links</span></h4>
+           <br/>
+            <a class="link" href="home.html">Home</a>
+            <br/>
+            <a class="link" href="Gallery.html">Gallery</a>
+            <br/>
+            <a class="link" href="new-arrival.html">New Arrivals</a>
+            <br/>
+            <a class="link" href="contact.html">Contact Us</a>
+            <br/>
+            <a class="link" href="about.html">About Us</a>
+            
+        </div>
+        <div class="child">
+            <h4><span>Categories</span></h4>
+           <br/>
+            <a class="link" href="#">Living Room</a>
+            <br/>
+            <a class="link" href="#">Bedroom</a>
+            <br/>
+            <a class="link" href="#">Dining Room</a>
+            <br/>
+            <a class="link" href="#">Office Furniture</a>
+            <br/>
+            <a class="link" href="#">Kitchen</a>
+        </div>
+        <div class="child">
+            <h4><span>Stay</span> Updated</h4>
+            <br/>
+            <p>Subscribe for exclusive designs and discount offers.</p>
+            <br/>
+            <div style="display: flex; align-items: center;">
+                <input id="email" type="email" placeholder="Enter your email" required> <input id="join" type="submit" value=" Join ">
+                </div>
+        </div>
+    </div>
+    <hr>
+    <br/>
+    <p>&copy; 2026 HomeNest Furniture. All Rights Reserved.</p>
+    <br/>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #26170F;
+    background: #f3e9e1;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    color: #26170F;
+}
+
+.hero {
+    height: 800px;
+
+    background-image:
+        linear-gradient(
+            rgba(243, 233, 225, 0.35),
+            rgba(243, 233, 225, 0.35)
+        ),
+        url("https://cassavalli.ae/wp-content/uploads/2025/09/sofa-chaise-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 420px;
+    margin-left: 24%;
+    margin-top: -255px;
+    text-align: left;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+    color: #26170F;
+}
+
+.hero h1 {
+    font-size: 36px;
+    line-height: 1.1;
+    margin: 3px 0 15px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.hero p {
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 390px;
+    text-align: left;
+}
+
+
+.line {
+    width: 38px;
+    height: 1px;
+    background: #26170F;
+    margin-bottom: 12px;
+}
+
+
+
+
+.intro {
+    background: #fff;
+
+    text-align: center;
+
+    padding: 38px 20px 40px;
+}
+
+.intro h2 {
+    max-width: 600px;
+
+    margin: 0 auto 16px;
+
+    font-size: 25px;
+    line-height: 1.3;
+
+    font-weight: 500;
+}
+
+.intro p {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: lighter;
+}
+
+
+
+.mission {
+    min-height: 540px;
+
+    display: grid;
+
+    grid-template-columns: 43% 57%;
+}
+
+.mission-image {
+    height: 540px;
+}
+
+.mission-content {
+    padding: 60px 8%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.mission-content h3,
+.values-content h3,
+.promise-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 10px;
+}
+
+.mission-content h2,
+.promise-content h2 {
+    font-size: 21px;
+
+    line-height: 1.3;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+.mission-content p,
+.promise-content p {
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+.values {
+    min-height: 600px;
+
+    display: grid;
+
+    grid-template-columns: 55% 45%;
+}
+
+.values-content {
+    padding: 115px 7% 70px 3%;
+    text-align: left;
+}
+
+.values-content > h3,
+.values-content > h2 {
+    text-align: left;
+}
+
+.value {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.value h4{
+    text-align: left;
+    font-size: 16px;
+}
+.value p {
+    text-align: left;
+font-size: 15px;
+}
+
+.values-image {
+    height: 470px;
+}
+
+
+
+
+.promise {
+    min-height: 420px;
+
+    display: grid;
+
+    grid-template-columns: 53% 47%;
+
+    align-items: center;
+}
+
+.promise-image {
+    height: 320px;
+}
+
+.promise-content {
+    padding: 50px 8%;
+}
+.mission-content,
+.promise-content {
+    text-align: left;
+}
+
+.mission-content h3,
+.mission-content h2,
+.mission-content p,
+.promise-content h3,
+.promise-content h2,
+.promise-content p {
+    text-align: left;
+}
+
+.mission-content .line,
+.promise-content .line {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+header{
+        border-bottom: 0.5px solid rgb(245, 233, 210);
+    }
+@media screen and (max-width: 600px) {
+
+  .hero {
+    height: auto !important;
+    min-height: 400px;
+    padding: 60px 20px;
+    justify-content: center;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+  }
+
+  .eyebrow, 
+  .hero h1, 
+  .hero p {
+    text-align: center !important;
+  }
+
+  .hero p {
+    max-width: 100% !important;
+  }
+
+  .intro {
+    padding: 30px 15px !important;
+  }
+
+  .intro h2, 
+  .intro p {
+    max-width: 100% !important;
+  }
+
+  .mission {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  .mission-image {
+    height: 280px !important;
+  }
+
+  .mission-content {
+    padding: 30px 20px !important;
+  }
+
+  .values {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  .values-content {
+    padding: 30px 20px !important;
+  }
+
+  .values-image {
+    height: 280px !important;
+    order: 2;
+  }
+
+  .promise {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  .promise-image {
+    height: 280px !important;
+  }
+
+  .promise-content {
+    padding: 30px 20px !important;
+  }
+
+  .mission-content, 
+  .promise-content, 
+  .values-content {
+    text-align: center !important;
+  }
+
+  .mission-content .line, 
+  .promise-content .line {
+    margin: 0 auto !important;
+  }
+}
+</style>
+</head>
+<body>
+       <header class="top-header">
+
+  <div class="logo-container">
+    <img src="ChatGPT Image Sep 5, 2026, 04_43_31 PM.png" alt="HomeNest Logo" class="site-logo">
+  </div>
+  
+  <div class="header-title">
+    <h1>Home<span>Nest</span></h1>
+    <p>Where Comforts Finds Its Place</p>
+  </div>
+
+  
+    <div class="social-icons">
+  <a href="#" class="icon-circle"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-twitter"></i></a>
+  <a href="#" class="icon-circle"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+  </div>
+</header>
+    <div style="background-color: #26170F;" id="nav-bar">
+        <a style="color:  rgb(245, 233, 210);" href="home.html">Home</a>
+        <a style="color:  rgb(245, 233, 210);"href="Gallery.html">Gallery</a>
+        <a style="color:  rgb(245, 233, 210);"href="new-arrival.html">New Arrivals</a>
+        <a style="color:  rgb(245, 233, 210);"href="contact.html">Contact Us</a>
+        <a style="color:  rgb(245, 233, 210);"href="about.html">About</a>
+    </div>
+
+
+    
+    <section class="hero" id="top">
+
+        <div class="hero-content">
+
+            <span style="text-align: left;" class="eyebrow">ABOUT HOMENEST</span>
+
+            <h1>Live Beautifully</h1>
+
+            <div class="line"></div>
+
+            <p>
+                At HomeNest, we believe your home should be a reflection
+                of who you are—timeless, elegant, and uniquely yours.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="intro">
+
+        <h2>
+            HomeNest is more than a furniture store.
+            It is a lifestyle destination for those who
+            value beauty, quality, and thoughtful living.
+        </h2>
+
+        <p>
+            From timeless furniture and elegant décor to refined lighting
+            and accessories, our collections are chosen to inspire,
+            comfort, and elevate everyday living.
+        </p>
+
+    </section>
+
+
+    <section class="mission">
+
+        <div class="mission-image">
+            <img src="https://celestehomefashion.com/cdn/shop/files/1_4d3afea2-1d20-44f5-9746-5b9155c308ab_720x.jpg?v=1783332583" alt="HomeNest furniture">
+        </div>
+
+        <div class="mission-content">
+
+            <h3>OUR MISSION</h3>
+
+            <div class="line"></div>
+
+            <h2>Designing spaces that feel like home.</h2>
+
+            <p>
+                We are committed to offering exceptional craftsmanship,
+                modern design, and a personalised experience that turns
+                houses into homes.
+            </p>
+
+        </div>
+
+    </section>
+
+    
+    <section style="text-align: left;" class="values">
+
+        <div class="values-content">
+
+            <h3>OUR VALUES</h3>
+
+            <div class="line"></div>
+
+            <h2>The principles that guide everything we do.</h2>
+            <br/>
+            <br/>
+
+
+            <div class="value">
+
+                <div class="icon">♢</div>
+
+                <div>
+                    <h4>Enduring Design</h4>
+                    <br/>
+
+                    <p>
+                        We design for longevity, creating pieces that
+                        remain relevant, desirable and beautiful beyond
+                        seasonal trends.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="icon">♡</div>
+
+                <div>
+                    <h4>Craftsmanship</h4>
+                    <br/>
+
+                    <p>
+                        Every piece is thoughtfully crafted with
+                        exceptional skill and precision, reflecting
+                        our commitment to quality, detail and
+                        enduring excellence.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="icon">♧</div>
+
+                <div>
+                    <h4>Elevated Comfort</h4>
+                    <br/>
+
+                    <p>
+                        True luxury is felt as much as it is seen.
+                        Every detail is considered to deliver exceptional
+                        comfort and enduring sophistication.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="icon">♡</div>
+
+                <div>
+                    <h4>Distinctive Design</h4>
+                    <br/>
+
+                    <p>
+                        We create furniture with a unique design
+                        perspective, combining contemporary aesthetics
+                        with thoughtful functionality to inspire
+                        modern living.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="values-image">
+            <img style="object-position: center 94%;" src="https://celestehomefashion.com/cdn/shop/files/1_e1d1b89c-c973-4bb4-902b-d8caafeaeb70_720x.jpg?v=1783332624" alt="HomeNest chair">
+        </div>
+
+    </section>
+
+
+    <section class="promise">
+
+        <div class="promise-image">
+            <img src="https://celestehomefashion.com/cdn/shop/files/1_55559584-868e-4423-8c87-24eff893f72e_720x.jpg?v=1783332304" alt="HomeNest bedroom">
+        </div>
+
+        <div class="promise-content">
+
+            <h3>OUR PROMISE</h3>
+
+            <div class="line"></div>
+
+            <h2>To help you create a home you truly love.</h2>
+
+            <p>
+                Whether you are designing a single room or an entire
+                home, we are here to bring your vision to life —
+                beautifully and seamlessly.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    
+
+<footer>
+
+    <div id="parent">
+        <div class="child">
+            <h2>Home<span>Nest</span></h2>
+            <br/>
+            <p>Crafting high-quality, sustainable wooden furniture to elevate modern living spaces with timeless elegance.</p>
+        </div>
+        <div class="child">
+            <h4>Quick <span>Links</span></h4>
+           <br/>
+            <a class="link" href="home.html">Home</a>
+            <br/>
+            <a class="link" href="Gallery.html">Gallery</a>
+            <br/>
+            <a class="link" href="new-arrival.html">New Arrivals</a>
+            <br/>
+            <a class="link" href="contact.html">Contact Us</a>
+            <br/>
+            <a class="link" href="about.html">About Us</a>
+            
+        </div>
+        <div class="child">
+            <h4><span>Categories</span></h4>
+           <br/>
+            <a class="link" href="#">Living Room</a>
+            <br/>
+            <a class="link" href="#">Bedroom</a>
+            <br/>
+            <a class="link" href="#">Dining Room</a>
+            <br/>
+            <a class="link" href="#">Office Furniture</a>
+            <br/>
+            <a class="link" href="#">Kitchen</a>
+        </div>
+        <div class="child">
+            <h4><span>Stay</span> Updated</h4>
+            <br/>
+            <p>Subscribe for exclusive designs and discount offers.</p>
+            <br/>
+            <div style="display: flex; align-items: center;">
+            <input id="email" type="email" placeholder="Enter your email" required> <input id="join" type="submit" value=" Join ">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <br/>
+    <p>&copy; 2026 HomeNest Furniture. All Rights Reserved.</p>
+    <br/>
+</footer>
+
+</body>
+</html>

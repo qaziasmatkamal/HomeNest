@@ -1,0 +1,226 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    body {
+      background-color: #f4f8f5;
+      color: black;
+    }
+
+    header {
+      background-color: #26170F;
+      color:rgb(245, 233, 210) ;
+      text-align: center;
+      padding: 30px;
+    }
+.top-header {
+  background-color: #26170F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+.site-logo {
+  height: 70px;
+  width: auto;
+  background-color: #26170F;
+}
+.header-title h1 {
+  color: #ffffff;
+  font-size: 28px;
+  margin: 0;
+}
+
+.header-title h1 span {
+  color: #D4A373;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #26170F; 
+  border: 1.5px solid #D4A373; 
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #D4A373; 
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+
+.icon-circle:hover {
+  background-color: #D4A373;
+  color: #26170F;
+}
+    #nav-bar{
+        position: sticky;
+      top: 0;
+      background-color: rgb(245, 233, 210);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 12px;
+      color: #26170F;
+      z-index: 999;
+    }
+    a{
+        color: #26170F;
+        text-decoration: none;
+        font-weight: bold;
+    }
+  footer{
+    background-color: #26170F;
+    color: rgb(245, 233, 210);
+    width: 100%;}
+    #parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+.child{
+    
+    width: 300px; height: 150px;
+}
+.child:nth-child(2){
+     border-right:3px solid #D4A373;
+      border-left:3px solid #D4A373;
+}
+.child:nth-child(3){
+     border-right:3px solid #D4A373;
+     border-left:3px solid #D4A373;
+}
+.child:first-child{
+     border-right:3px solid #D4A373;
+     padding-right: 20px;
+     padding-left: 20px;
+}
+.child:last-child{
+     border-left:3px solid #D4A373;
+    padding-left: 20px;
+    
+}
+span{
+    color:#D4A373;
+}
+.link{
+    color: rgb(245, 233, 210);
+    text-decoration: none;
+    line-height: 24px;
+}
+#email {
+  background-color: #26170F;
+  border: 4px solid #D4A373;
+  border-right: none; 
+  padding: 10px 15px;
+  border-radius: 4px 0 0 4px; 
+  outline: none;
+  color: rgb(245, 233, 210);
+}
+
+#join {
+  padding: 10px 15px;
+  background-color: #D4A373;
+  border: 4px solid #D4A373;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+
+  .top-header {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 15px !important;
+  }
+
+  .site-logo {
+    height: 35px !important;
+    width: auto !important;
+  }
+
+  .header-title h1 {
+    font-size: 18px !important;
+  }
+
+  .header-title p {
+    font-size: 9px !important;
+  }
+
+  .social-icons {
+    display: flex !important;
+    gap: 5px !important;
+  }
+
+  .icon-circle {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 11px !important;
+  }
+
+  #nav-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 8px 5px !important;
+    white-space: nowrap !important;
+  }
+
+  #nav-bar a {
+    font-size: 11px !important;
+    padding: 2px 4px !important;
+  }
+
+  footer #parent {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    padding: 15px 10px !important;
+    gap: 8px !important;
+  }
+
+  footer .child {
+    flex: 1 !important;
+    font-size: 10px !important;
+  }
+
+  footer .child h2, 
+  footer .child h4 {
+    font-size: 11px !important;
+    margin-bottom: 5px !important;
+  }
+
+  footer .child p, 
+  footer .link {
+    font-size: 9px !important;
+  }
+
+  footer input#email {
+    width: 60px !important;
+    font-size: 8px !important;
+    padding: 3px !important;
+  }
+
+  footer input#join {
+    font-size: 8px !important;
+    padding: 3px 6px !important;
+  }
+}
